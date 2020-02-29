@@ -1,0 +1,16 @@
+//Write program to calculate simple interest, and compound interest
+
+package com.epam.epam_task3;
+
+public class SCInterest {
+	public static double si(String inputMessage1,String inputMessage2,String inputMessage3) {
+		double simpleInterest=0;
+		simpleInterest=(Double.valueOf(inputMessage1)*Double.valueOf(inputMessage3)*Double.valueOf(inputMessage2))/100;
+		return simpleInterest;
+	}
+	public static double ci(String inputMessage1,String inputMessage2,String inputMessage3) {
+		double compoundInterest=0;
+		compoundInterest=Double.valueOf(inputMessage1)*Math.pow((1+(Double.valueOf(inputMessage2)/100)),Double.valueOf(inputMessage3));
+		return compoundInterest;
+	}
+}

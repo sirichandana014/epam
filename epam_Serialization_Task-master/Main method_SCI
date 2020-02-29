@@ -1,0 +1,20 @@
+//Main method for simple and compound interest program
+
+package com.epam.epam_task3;
+
+import javax.swing.JOptionPane;
+
+public class MainMeth1 {
+	public static void main(String[] args) {
+		String inputMessage1 = JOptionPane.showInputDialog(null,"Principal : ");
+		
+		String inputMessage2 = JOptionPane.showInputDialog(null,"Rate of interest : ");
+		
+		String inputMessage3 = JOptionPane.showInputDialog(null,"Time duration : ");
+		
+		JOptionPane.showMessageDialog(null,"Calculating simple and compound interests: \r\n" + 
+				""+"\n"+"Simple interest : "+SCInterest.si(inputMessage1, inputMessage2, inputMessage3)+"\n"+
+				"Compund interest : "+SCInterest.ci(inputMessage1, inputMessage2, inputMessage3));
+
+	}
+}

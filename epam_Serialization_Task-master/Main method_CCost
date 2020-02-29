@@ -1,0 +1,19 @@
+//main method for construction cost of the house
+
+package com.epam.epam_task3;
+
+import javax.swing.JOptionPane;
+
+public class MainMeth2 {
+	public static void main(String[] args) {
+		String inputMessage1 = JOptionPane.showInputDialog(null,"Material standards (low/moderate/high) : ");
+	
+		String inputMessage2 = JOptionPane.showInputDialog(null,"Area of house (sqft) : ");
+	
+		String inputMessage3 = JOptionPane.showInputDialog(null,"Automated house(yes/no) : ");
+	
+		JOptionPane.showMessageDialog(null,"Total construction cost of the house : "+"\n"+CostOfHouse.constructionCost(inputMessage1, inputMessage2, inputMessage3));
+
+	}
+	
+}

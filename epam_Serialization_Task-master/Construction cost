@@ -1,0 +1,39 @@
+//Write program to estimate house construction cost, based on various materials
+//Construction cost per square feet is,
+//  -1200INR if we use standard materials
+//  -1500INR if we use above standard materials
+//  -1800INR if customers needs high standard materials
+//  -2500INR if customers need high standard materials and a fully automated home
+//  Input will be material standard, total area of the house, and if they want a fully automated home.
+
+package com.epam.epam_task3;
+
+public class CostOfHouse {
+
+	public static double constructionCost(String materialStd, String area, String automatedHome) {
+			int matCost=0;
+			switch(materialStd) {
+			case "moderate":
+				matCost=1500;
+				break;
+			
+			case "high":
+				switch(automatedHome) {
+				case "yes":
+					matCost=2500;
+					break;
+				case "no":
+					matCost=1800;
+					break;
+				}
+				
+				break;
+				 
+			default:matCost=1200;
+			}
+			
+			double constructionCost=0;
+			constructionCost=Double.valueOf(area)*matCost; 
+			return constructionCost;
+}
+}
